@@ -54,6 +54,7 @@ opensc_explorer_SOURCES = opensc-explorer.c util.c
 opensc_explorer_LDADD = $(OPTIONAL_READLINE_LIBS)
 pkcs15_tool_SOURCES = pkcs15-tool.c util.c
 pkcs15_tool_LDADD = $(OPTIONAL_OPENSSL_LIBS)
+pkcs15_tool_CPPFLAGS = -D_XOPEN_SOURCE=500
 pkcs11_tool_SOURCES = pkcs11-tool.c util.c
 pkcs11_tool_LDADD = \
 	$(top_builddir)/src/common/libpkcs11.la \
